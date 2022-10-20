@@ -1,0 +1,22 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Category Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Units In Stock</th>
+            <th scope="col">Unit Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products" (click)="addProductToTable(product)" >
+            <td>{{product.id}}</td>
+            <td>{{product.categoryId}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.description}}</td>
+            <td>{{product.unitsInStock}}</td>
+            <td>{{product.unitPrice}}</td>
+        </tr>
+    </tbody>
+</table>

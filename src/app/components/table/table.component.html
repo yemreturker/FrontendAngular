@@ -1,0 +1,18 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Capasity</th>
+            <th scope="col">Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let table of tables" class="{{table.status? 'table-danger' : 'table-success'}}" (click)="goTableDetails(table)">
+            <td scope="row">{{table.id}}</td>
+            <td scope="row">{{table.name}}</td>
+            <td scope="row">{{table.capasity}}</td>
+            <td scope="row">{{table.status? 'On Service': 'Available'}}</td>
+        </tr>
+    </tbody>
+</table>

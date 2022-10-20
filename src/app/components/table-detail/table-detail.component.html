@@ -1,0 +1,21 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Product Name</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Unit Price</th>
+            <th scope="col">Total Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let tableItem of tableCart.tableItems" (click)="deleteProductFromTable(tableItem.product)">
+            <td>{{tableItem.product.id}}</td>
+            <td>{{tableItem.product.name}}</td>
+            <td>{{tableItem.quantity}}</td>
+            <td>{{tableItem.product.unitPrice}}₺</td>
+            <td>{{tableItem.product.unitPrice * tableItem.quantity}}₺</td>
+        </tr>
+    </tbody>
+</table>
+<button type="button" (click)="AddProductToTable()" class="btn btn-outline-success">New Product Add</button>
